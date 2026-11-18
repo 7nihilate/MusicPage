@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brett Alexander Preston — Engineer &amp; Artist</title>
-  <meta name="description" content="Portfolio of Brett Alexander Preston — software engineer, music producer, game developer, and 3D artist.">
+  <title>Brett Alexander Preston - Engineer &amp; Artist</title>
+  <meta name="description" content="Portfolio of Brett Alexander Preston - software engineer, music producer, game developer, and 3D artist.">
   <meta name="author" content="Brett Alexander Preston">
 
   <!-- Fonts -->
@@ -27,8 +27,10 @@
     </button>
 
     <ul class="nav-links">
+      <li><a href="#about">About</a></li>
       <li><a href="#projects">Software</a></li>
       <li><a href="#gamedev">GameDev</a></li>
+      <li><a href="#research">Research</a></li>
       <li><a href="https://zaga.music">Music</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -47,18 +49,34 @@
 <!-- ===== Hero ===== -->
 <section class="hero">
   <div class="container hero-content">
-    <div class="hero-label"> </div>
-    <h1>
-	
-      <span class="gradient-text"> Brett Preston </span> <br></h1>
+    <h1><span class="gradient-text">Brett Preston</span></h1>
 	  <h2>Software engineering, audio tools development, <br>
       music production, game development, and 3D art.<br>
     </h2>
-    <p class="hero-desc">
-    </p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View Projects</a>
       <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">About</h2>
+    </div>
+
+    <div class="about-grid reveal">
+      <img src="img/brett-headshot.jpg" alt="Brett Preston" class="about-photo" width="480" height="480">
+      <div class="about-bio">
+        <p>
+          Audio software engineer, producer, composer and sound designer. My work in DSP, accessibility, privacy-preserving audio and immersive sound has produced open-source tools supported by the NLnet Foundation and Wau Holland Stiftung.
+        </p>
+        <p>
+          Co-founder of Augmented Hearing, building affordable, open hearing technology. Previously audio director for VR, with deep experience in spatial audio and dynamics processing across platforms.
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -67,18 +85,20 @@
 <section class="section" id="projects">
   <div class="container">
     <div class="section-header">
-      <div class="section-label"> </div>
       <h2 class="section-title">Software</h2>
     </div>
 
     <!-- Augmented Hearing -->
     <div class="featured-project reveal">
       <div class="featured-body">
-        <div class="featured-tag">Modern audio engineering for hearing health.</div>
+        <div class="featured-tag">Co-founder &middot; Hearing Health &middot; Open Source</div>
         <h3>Augmented Hearing</h3>
         <p>
           Augmented Hearing is an open source solution that brings real-time loudness balancing, hearing-profile personalization, and clearer speech to everyday listening. We are building both a software-first and a hardware alternative to an expensive, outdated hearing technology market.
-		        </p>
+        </p>
+        <p>
+          It started when a field-recorder mic, wired earbuds, compression and a limiter did more for a 102-year-old than his expensive hearing aids. Next up: a tiny sound engineer inside your computer that knows your hearing profile, running system-wide on Windows, and then an affordable hardware hearing aid.
+        </p>
         <div class="tech-tags">
           <span class="tech-tag">Hearing Aid</span>
           <span class="tech-tag">Audio DSP</span>
@@ -86,6 +106,52 @@
         </div>
         <div class="project-links">
           <a href="https://augmentedhearing.ca">augmentedhearing.ca &#8599;</a>
+          <a href="https://augmentedhearing.ca/info/AugmentedHearingPitch.pdf">Pitch deck &#8599;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OpenAirCare -->
+    <div class="featured-project featured-split reveal">
+      <div class="featured-body">
+        <div class="featured-tag">Augmented Hearing &middot; Rust &middot; Linux</div>
+        <h3>OpenAirCare</h3>
+        <p>
+          A Linux app (Rust, Makepad UI) that unlocks the hearing-health features already built into AirPods Pro 2 and 3. It reads and writes the earbuds' own transparency-mode hearing profile over Bluetooth, with an audiogram editor, a built-in pure-tone hearing test (modified Hughson-Westlake, 250&nbsp;Hz&ndash;8&nbsp;kHz), and amplification, tone, noise-reduction and conversation-boost controls.
+        </p>
+        <p>
+          Runs on x86_64 and ARM, including the Raspberry Pi&nbsp;5.
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">Rust</span>
+          <span class="tech-tag">Bluetooth</span>
+          <span class="tech-tag">Hearing Health</span>
+          <span class="tech-tag">Open Source</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/7nihilate/OpenAirCare">GitHub &#8599;</a>
+          <a href="https://github.com/7nihilate/OpenAirCare/releases">Releases &#8599;</a>
+        </div>
+      </div>
+
+      <div class="carousel" aria-roledescription="carousel" aria-label="OpenAirCare screenshots">
+        <div class="carousel-track" tabindex="0">
+          <figure class="carousel-slide"><img src="img/openaircare/setup.png" alt="OpenAirCare Setup tab" width="300" height="410" loading="lazy"><figcaption>Setup</figcaption></figure>
+          <figure class="carousel-slide"><img src="img/openaircare/status.png" alt="OpenAirCare Status tab" width="300" height="410" loading="lazy"><figcaption>Status</figcaption></figure>
+          <figure class="carousel-slide"><img src="img/openaircare/hearing-health.png" alt="OpenAirCare Hearing Health tab" width="300" height="410" loading="lazy"><figcaption>Hearing Health</figcaption></figure>
+          <figure class="carousel-slide"><img src="img/openaircare/hearing-test.png" alt="OpenAirCare Hearing Test tab" width="300" height="410" loading="lazy"><figcaption>Hearing Test</figcaption></figure>
+          <figure class="carousel-slide"><img src="img/openaircare/hearing-test-manual.png" alt="OpenAirCare Hearing Test tab, manual mode" width="300" height="410" loading="lazy"><figcaption>Hearing Test &middot; Manual</figcaption></figure>
+          <figure class="carousel-slide"><img src="img/openaircare/audiogram.png" alt="OpenAirCare Audiogram tab" width="300" height="410" loading="lazy"><figcaption>Audiogram</figcaption></figure>
+          <figure class="carousel-slide"><img src="img/openaircare/adjustments.png" alt="OpenAirCare Adjustments tab" width="300" height="410" loading="lazy"><figcaption>Adjustments</figcaption></figure>
+        </div>
+        <div class="carousel-controls">
+          <button type="button" class="carousel-btn" data-dir="-1" aria-label="Previous screenshot">
+            <svg viewBox="0 0 24 24"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4-4.6-4.6z"/></svg>
+          </button>
+          <div class="carousel-dots"></div>
+          <button type="button" class="carousel-btn" data-dir="1" aria-label="Next screenshot">
+            <svg viewBox="0 0 24 24"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -124,12 +190,12 @@
         <div class="card-footer">
           <span class="tech-tag">WebAudio</span>
           <span class="tech-tag">Firefox</span>
-        </div><br>
+          <span class="tech-tag">Augmented Hearing</span>
+        </div>
         <div class="project-links">
           <a href="https://github.com/7nihilate/ThunderFox">GitHub &#8599;</a>
           <a href="https://addons.mozilla.org/en-US/firefox/addon/thunderfox-loudness-normalizer/">Firefox page &#8599;</a>
         </div>
-		
       </div>
 
       <div class="project-card">
@@ -161,7 +227,6 @@
 <section class="section" id="gamedev">
   <div class="container">
     <div class="section-header">
-      <div class="section-label"> </div>
       <h2 class="section-title">Game Development</h2>
     </div>
 
@@ -175,6 +240,9 @@
           <p>A game about building a better world, made with the support of <a href="https://www.ccc.de/en/home">Chaos Computer Club</a> to celebrate its 42 years of groundbreaking innovation.</p>
           <div class="project-links">
             <a href="https://cubetopia.art">Play &#8599;</a>
+            <a href="https://machine-elves-workshop.itch.io/cubetopia">itch.io &#8599;</a>
+            <a href="https://www.youtube.com/watch?v=tXytOYlsuRc">Trailer &#8599;</a>
+            <a href="https://github.com/7nihilate/Cubetopia">GitHub &#8599;</a>
           </div>
         </div>
       </div>
@@ -193,11 +261,69 @@
       </div>
 
       <div class="gamedev-card">
-        <img src="img/deer.jpg" alt="Deer Island">
+        <div class="carousel carousel-media" aria-roledescription="carousel" aria-label="No Gods No Cameras screenshots">
+          <div class="carousel-track" tabindex="0">
+            <figure class="carousel-slide"><img src="img/ngnc/start.jpg" alt="No Gods No Cameras key art: a surveillance eye in a walled tower, with people climbing in" width="800" height="450"></figure>
+            <figure class="carousel-slide"><img src="img/ngnc/shot3.jpg" alt="Split-screen co-op on a London street at night" width="800" height="450" loading="lazy"></figure>
+            <figure class="carousel-slide"><img src="img/ngnc/shot1.jpg" alt="Split-screen: player two arrested" width="800" height="450" loading="lazy"></figure>
+            <figure class="carousel-slide"><img src="img/ngnc/shot2.jpg" alt="Co-op character select for up to four players" width="800" height="450" loading="lazy"></figure>
+          </div>
+          <div class="carousel-controls">
+            <button type="button" class="carousel-btn" data-dir="-1" aria-label="Previous screenshot">
+              <svg viewBox="0 0 24 24"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4-4.6-4.6z"/></svg>
+            </button>
+            <div class="carousel-dots"></div>
+            <button type="button" class="carousel-btn" data-dir="1" aria-label="Next screenshot">
+              <svg viewBox="0 0 24 24"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg>
+            </button>
+          </div>
+        </div>
         <div class="card-body">
-          <div class="role">Various Roles</div>
-          <h3>Deer Island</h3>
-          <p>A thought-provoking game produced by End of the Line. Hired to troubleshoot Unity issues, improve the graphics, and bring the game to release.</p>
+          <div class="role">Godot &middot; FPS &middot; Action Stealth</div>
+          <h3>No Gods No Cameras</h3>
+          <p>A Godot FPS action stealth game set in London where the player fights against the systems of surveillance.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Research / Writing ===== -->
+<section class="section" id="research">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Research &amp; Writing</h2>
+    </div>
+
+    <div class="project-grid stagger reveal">
+
+      <div class="project-card">
+        <div class="featured-tag">October 2023 &middot; Wau Holland Stiftung</div>
+        <h3>Audio Engineering Considerations for a Modern Mixnet</h3>
+        <p>How to add voice communication to a privacy-preserving mix network without the metadata leaking what was said. Covers content leaks in encrypted VoIP, then codec, bitrate, bandwidth and frame-size recommendations, plus noise reduction and EQ for constrained links.</p>
+        <div class="card-footer">
+          <span class="tech-tag">Privacy</span>
+          <span class="tech-tag">Audio Codecs</span>
+          <span class="tech-tag">Mixnet</span>
+        </div>
+        <div class="project-links">
+          <a href="Audio%20Engineering%20Considerations%20for%20a%20Modern%20Mixnet%20-%20Brett%20Preston.pdf">Read PDF &#8599;</a>
+          <a href="mixnet-samples.html">Listening samples &#8599;</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="featured-tag">January&ndash;April 2025 &middot; NLnet Foundation</div>
+        <h3>The Development of the Audio Cleaning and Compression Tools</h3>
+        <p>Report on the Rustic Audio toolset built for the Katzenpost/Echomix mixnet: a Rust DSP chain (loudness normalization, filters, spectral and noise gates) and Opus encoding that keeps a 30-second voice message under 45&nbsp;kB.</p>
+        <div class="card-footer">
+          <span class="tech-tag">Rust</span>
+          <span class="tech-tag">Opus</span>
+          <span class="tech-tag">Audio DSP</span>
+        </div>
+        <div class="project-links">
+          <a href="NLnet_report.pdf">Read PDF &#8599;</a>
         </div>
       </div>
 
@@ -288,7 +414,44 @@
   document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el));
 </script>
 
+<!-- Screenshot carousel -->
+<script>
+  document.querySelectorAll('.carousel').forEach(carousel => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = [...track.children];
+    const dotWrap = carousel.querySelector('.carousel-dots');
+    let current = 0;
+
+    const go = i => {
+      current = (i + slides.length) % slides.length;
+      track.scrollTo({ left: slides[current].offsetLeft, behavior: 'smooth' });
+    };
+
+    const dots = slides.map((slide, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      const caption = slide.querySelector('figcaption');
+      dot.setAttribute('aria-label', 'Show ' + (caption ? caption.textContent : 'slide ' + (i + 1)));
+      dot.addEventListener('click', () => go(i));
+      dotWrap.appendChild(dot);
+      return dot;
+    });
+
+    carousel.querySelectorAll('.carousel-btn').forEach(btn =>
+      btn.addEventListener('click', () => go(current + Number(btn.dataset.dir))));
+
+    const setActive = i => {
+      current = i;
+      dots.forEach((d, j) => d.setAttribute('aria-current', j === i ? 'true' : 'false'));
+    };
+    setActive(0);
+
+    const slideObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) setActive(slides.indexOf(e.target)); });
+    }, { root: track, threshold: 0.6 });
+    slides.forEach(s => slideObserver.observe(s));
+  });
+</script>
+
 </body>
 </html>
-											  
-
